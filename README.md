@@ -1,5 +1,6 @@
-> pip freeze > requirements.txt
-# Setup
+# Press scraper
+
+## Setup
 - install dependencies from file requirements.txt
 - run server using this command
 > uvicorn main:app
