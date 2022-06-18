@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
-from rest import hespress
+from .rest import hespress
 
 app = FastAPI()
 app.include_router(hespress.router, prefix="/hespress", tags=["Hespress"])
