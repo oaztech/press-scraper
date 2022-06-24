@@ -76,9 +76,9 @@ def get_articles_of_category(category_slug, page=1):
             "title": anchor.attrs["title"] if anchor is not None and 'title' in anchor.attrs else "",
             "image": img.attrs["src"] if img is not None and 'src' in img.attrs else "",
             "url": anchor.attrs["href"] if anchor is not None and 'href' in anchor.attrs else "",
-            "id": re.search(r"-\d+\.html", anchor.attrs["href"]).group()
+            "id": int(re.search(r"-\d+\.html", anchor.attrs["href"]).group()
                 .replace("-", "")
-                .replace(".html", ""),
+                .replace(".html", "")),
             "created_at": date.get_text() if date is not None else ""
         })
 
