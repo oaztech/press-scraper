@@ -99,7 +99,7 @@ def get_article(id_article):
 
     return {
         "title": soup.find("h1").get_text(),
-        "img": soup.select_one(".post-thumbnail img").attrs["src"],
+        "image": soup.select_one(".post-thumbnail img").attrs["src"],
         "author": soup.select_one(".author a").get_text().replace("هسبريس - ", "").strip(),
         "content": content
     }
